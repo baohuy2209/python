@@ -1,0 +1,5 @@
+The information of EngineerFullname : huy
+Age : 17
+Gender : nam
+Address : binhdinh
+Rank : 6

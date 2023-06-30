@@ -1,0 +1,2 @@
+Ban kinh : <__main__.Circle object at 0x000002330C177FD0>
+Area of cirle : 

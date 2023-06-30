@@ -1,0 +1,5 @@
+lst = set()
+lst.add("huy")
+lst.add('bao')
+lst.add('nguyen')
+print(lst)

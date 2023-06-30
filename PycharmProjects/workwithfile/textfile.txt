@@ -1,0 +1,89 @@
+def inputname():
+    name = input("Enter the name :")
+    ck = True
+    while(ck):
+        if name.isalpha() == False:
+            raise Exception("Invalid , let's try again")
+        else:
+            ck = False
+    return name
+
+
+def inputemail():
+    em = input("Enter the email : ")
+    ck = True
+    while(ck) :
+        if "@gmail.com" not in em :
+            raise Exception("Invalid , let's try again")
+        else :
+            ck = False
+    return em
+
+
+def inputDate():
+    day = int(input("+ day :"))
+    month = int(input("+ month :"))
+    year = int(input("+ year : "))
+    bir = datetime.date(year, month, day)
+    return bir
+
+
+def inputCertificate(n,fullname,id):
+    lstcer = []  # list of certificates of this person
+    for i in range(n):
+        cerid = id
+        cername = fullname
+        cerrank = input("Rank of certificate: ")
+        cerdate = inputDate()
+        cer = Certificate(cerid, cername, cerrank, cerdate)
+        lstcer.append(cer)
+    return lstcer
+
+
+def inputexperience():
+    print("Enter the information of experience: ")
+    id = int(input("ID : "))
+    fullname = inputname()
+    print("Birthday : ")
+    birthday = inputDate()
+    phone = int(input("Phone : "))
+    email = inputemail()
+    n = int(input("Enter number of certificates of this person : "))
+    listcerti = inputCertificate(n, fullname, id)
+    expinyear = int(input("Experience year : "))
+    proSkill = input("Skill of this person : ")
+    experience = Experience(id, fullname, birthday, phone, email, listcerti, expinyear, proSkill)
+    return experience
+
+
+def inputfresher():
+    print("Enter the information of Fresher : ")
+    id = int(input("ID : "))
+    fullname = inputname()
+    print("Birthday : ")
+    birthday = inputDate()
+    phone = int(input("Phone : "))
+    email = inputemail()
+    n = int(input("Enter number of certificates of this person : "))
+    listcerti = inputCertificate(n, fullname, id)
+    gra_date = inputDate()
+    gra_rank = input("Rank of education : ")
+    edu = input("Where training the fresher : ")
+    fre = Fresher(id, fullname, birthday, phone, email, listcerti, gra_date, gra_rank, edu)
+    return fre
+
+def inputintern():
+    print("Enter the information of Intern : ")
+    id = int(input("ID : "))
+    fullname = inputname()
+    print("Birthday : ")
+    birthday = inputDate()
+    phone = int(input("Phone : "))
+    email = inputemail()
+    n = int(input("Enter number of certificates of this person : "))
+    listcerti = inputCertificate(n, fullname, id)
+    maj = input("Major : ")
+    ses = input("Sesmeter : ")
+    uni_name = input("University which this intern is studying : ")
+    inte = Intern(id, fullname, birthday, phone, email, listcerti, maj, ses, uni_name)
+    return inte
