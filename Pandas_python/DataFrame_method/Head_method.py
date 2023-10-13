@@ -1,6 +1,6 @@
 import pandas as pd 
 
-df = pd.read_csv('C:/Users/ADMIN/Documents/GitHub/Pandas_python/DataFrame_method/DSLopK23411.csv')
+df = pd.read_csv('C:/Users/ADMIN/Documents/GitHub/python/Pandas_python/DataFrame_method/DSLopK23411.csv')
 
 print(df.head(10)); 
 #If you do not pass a parameter to the head function,
