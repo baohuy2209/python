@@ -1,0 +1,171 @@
+---
+title: "R Notebook"
+output: html_notebook
+---
+
+This is an [R Markdown](http://rmarkdown.rstudio.com) Notebook. When you execute code within the notebook, the results appear beneath the code.
+
+Try executing this chunk by clicking the *Run* button within the chunk or by placing your cursor inside it and pressing *Ctrl+Shift+Enter*.
+
+```{r}
+plot(cars)
+```
+
+Add a new chunk by clicking the *Insert Chunk* button on the toolbar or by pressing *Ctrl+Alt+I*.
+
+When you save the notebook, an HTML file containing the code and output will be saved alongside it (click the *Preview* button or press *Ctrl+Shift+K* to preview the HTML file).
+
+The preview shows you a rendered HTML copy of the contents of the editor. Consequently, unlike *Knit*, *Preview* does not run any R code chunks. Instead, the output of the chunk when it was last run in the editor is displayed. VECTOR
+
+```{r}
+fruits <- c("banana", "apple", "orange")
+fruits 
+```
+
+```{r}
+numbers <- c(1,2,3) 
+numbers 
+```
+
+To create a vector with numerical values in a sequence, use the : operator:
+
+```{r}
+# Vector with numerical values in a sequence
+numbers <- 1:10
+
+numbers
+```
+
+You can also create numerical values with decimals in a sequence, but note that if the last element does not belong to the sequence, it is not used:
+
+```{r}
+# Vector with numerical decimals in a sequence
+numbers1 <- 1.5:6.5
+numbers1
+
+# Vector with numerical decimals in a sequence where the last element is not used
+numbers2 <- 1.5:6.3
+numbers2
+```
+
+In the example below, we create a vector of logical values:
+
+```{r}
+# Vector of logical values
+log_values <- c(TRUE, FALSE, TRUE, FALSE)
+
+log_values
+```
+
+Vector Length
+
+To find out how many items a vector has, use the length() function:
+
+```{r}
+fruits <- c("banana", "apple", "orange")
+
+length(fruits)
+
+```
+
+Sort a Vector
+
+To sort items in a vector alphabetically or numerically, use the sort() function:
+
+```{r}
+fruits <- c("banana", "apple", "orange","mango", "lemon")
+numbers <- c(13,3,5,7,20,2)
+
+sort(fruits) # Sort a string 
+sort(numbers) # Sort numbers 
+
+fruits 
+numbers
+```
+
+Access Vectors
+
+You can access the vector items by referring to its index number inside brackets []. The first item has index 1, the second item has index 2, and so on:
+
+```{r}
+fruits <- c("banana", "apple", "orange")
+
+# Access the first item (banana)
+fruits[1]
+
+fruits[3]
+```
+
+You can also access multiple elements by referring to different index positions with the c() function:
+
+```{r}
+fruits <- c("banana", "apple", "orange", "mango", "lemon")
+
+fruits[c(1,3)]
+```
+
+You can also use negative index numbers to access all items except the ones specified:
+
+```{r}
+fruits <- c("banana", "apple", "orange", "mango", "lemon")
+
+# Access all items except for the first item
+fruits[c(-1)]
+```
+
+Change an item
+
+To change the value of a specific item, refer to the index number:
+
+```{r}
+fruits <- c("banana", "apple", "orange", "mango", "lemon")
+
+# Change "banana" to "pear" 
+fruits[1] <- "pear" 
+
+fruits
+```
+
+Repeat Vectors
+
+To repeat vectors, use the rep() function:
+
+```{r}
+repeat_each <- rep(c(1,2,3), each = 3)
+repeat_each
+```
+
+Repeat the sequence of the vector:
+
+```{r}
+repeat_times <- rep(c(1,2,3), tímes = 3)
+repeat_times 
+```
+
+Repeat each value independdently:
+
+```{r}
+repeat_indepent <- rep(c(1,2,3), times = c(5,2,1))
+
+repeat_indepent
+```
+
+Generating Sequenced Vectors
+
+One of the examples on top, showed you how to create a vector with numerical values in a sequence with the : operator:
+
+```{r}
+numbers <- 1:10
+numbers 
+```
+
+To make bigger or smaller steps in a sequence, use the seq() function:
+
+```{r}
+numbers <- seq(from = 0, to = 100, by = 20)
+
+numbers
+
+```
+
+Note: The seq() function has three parameters: from is where the sequence starts, to is where the sequence stops, and by is the interval of the sequence.
