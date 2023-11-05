@@ -1,0 +1,46 @@
+---
+title: "R Notebook"
+output: html_notebook
+---
+
+This is an [R Markdown](http://rmarkdown.rstudio.com) Notebook. When you execute code within the notebook, the results appear beneath the code. 
+
+Try executing this chunk by clicking the *Run* button within the chunk or by placing your cursor inside it and pressing *Ctrl+Shift+Enter*. 
+
+```{r}
+plot(cars)
+```
+
+Add a new chunk by clicking the *Insert Chunk* button on the toolbar or by pressing *Ctrl+Alt+I*.
+
+When you save the notebook, an HTML file containing the code and output will be saved alongside it (click the *Preview* button or press *Ctrl+Shift+K* to preview the HTML file).
+
+The preview shows you a rendered HTML copy of the contents of the editor. Consequently, unlike *Knit*, *Preview* does not run any R code chunks. Instead, the output of the chunk when it was last run in the editor is displayed.
+BOOLEAN (Logical Values)
+In programming, you often need to know if an expression is true or false. 
+You can evaluate any expression in R, and get one of two answers, `TRUE` or `FALSE`. 
+When you compare to values, the expression is evaluates and R returns the logical answer: 
+```{r}
+10 > 9 # TRUE because 10 is greater than 9 
+10 == 9 # FALSE because 10 is not equal to 9 
+10 < 9 # FALSE becasue 10 is greater than 9 
+```
+You can also compare two variables: 
+```{r}
+a <- 10 
+b <- 9 
+
+a>b
+```
+You can also run a condition in an if statement, which you will learn much more about in the if ... else chapter. 
+```{r}
+a <- 200 
+b <- 33 
+
+if (b > a){
+  print("b is greater than a ")
+}else{
+  print("b is not greater than a")
+}
+```
+
