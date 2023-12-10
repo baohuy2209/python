@@ -1,14 +1,19 @@
-import pandas as pd 
+import pandas as pd
+
 import numpy as np
 
-filename = "C:/Users/ADMIN/Documents/GitHub/python/Pandas_python/Data_Aggregation_and_Group_Operations/Column_Wise_and_Multiple_Function_Application/tips.csv"
+filename = "C:/Users/Admin/OneDrive/Documents/GitHub/python/Pandas_python/Data_Aggregation_and_Group_Operations/Column_Wise_and_Multiple_Function_Application/tips.csv"
 
 tips = pd.read_csv(filename)
 
-def top (df, n = 5, columns = "total_bill"):
-    return df.sort_values(columns, ascending = True)[:n]
 
-result = tips.groupby("smoker", group_keys = False).apply(top)
+def top(df, n=5, columns="total_bill"):
+    return df.sort_values(columns, ascending=True)[:n]
+
+
+result = tips.groupby("smoker", group_keys=False).apply(top)
+
+print(result)
 
 #      total_bill   tip     sex smoker   day    time  size
 # 111        7.25  1.00  Female     No   Sat  Dinner     1
