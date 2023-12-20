@@ -1,0 +1,6 @@
+{
+	"folders": [],
+	"settings": {
+		"mojo.modularHomePath": "$MODULAR_HOME/pkg/packages.modular.com_mojo/bin:$PATH"
+	}
+}
